@@ -1,0 +1,365 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+input {
+  box-sizing: border-box;
+}
+
+.ca-hedder {
+  position: relative;
+  height: 55px;
+  background-color: #2e0052;
+  text-align: center;
+  color: #ffffff;
+  font-family: Roboto;
+  font-weight: 400;
+  display: block;
+  display: none;
+}
+
+.ca-res-img {
+  display: block;
+  margin-top: -13%;
+  margin-left: 3%;
+  margin-right: auto;
+  width: 25%;
+  display: none;
+  align-items: center;
+}
+
+.ca-res-para {
+  position: relative;
+  display: block;
+  margin-right: auto;
+  margin-left: 20%;
+  font-family: Roboto;
+  font-weight: 500;
+  color: #2e0052;
+  font-size: 1.5rem;
+  margin-top: 1%;
+  display: none;
+}
+
+.brand-img {
+  display: block;
+  margin-top: 2%;
+  margin-left: 44%;
+  margin-right: auto;
+  width: 10%;
+}
+
+.form-container {
+  display: block;
+  border: 1px solid #d9d9d9;
+  border-radius: 5px;
+  width: 30%;
+  margin: 0 auto;
+  height: 75vh;
+  margin-top: 1%;
+}
+
+.ca-para {
+  position: relative;
+  margin-left: 5%;
+  margin-top: 5%;
+  font-family: Roboto;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #000000;
+}
+
+.media-line {
+  position: relative;
+
+  margin-top: -5%;
+  margin-left: 35%;
+  font-family: Roboto;
+  font-size: 1rem;
+  font-weight: 300;
+  color: #000000;
+  display: none;
+}
+
+.ca-label-1 {
+  position: relative;
+  top: 12px;
+  margin-left: 9%;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: Roboto;
+}
+
+.ca-label-2 {
+  position: relative;
+  top: 21px;
+  margin-left: 9%;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: Roboto;
+}
+
+.ca-label-3 {
+  position: relative;
+  top: 30px;
+  margin-left: 9%;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: Roboto;
+}
+
+.ca-label-4 {
+  position: relative;
+  top: 38px;
+  margin-left: 9%;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: Roboto;
+}
+
+.ca-box-1 {
+  position: relative;
+  width: 85%;
+  height: 35px;
+  margin-top: 1%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  border-radius: 8px;
+  border: 2px solid #b6b6b6;
+}
+
+.ca-box-2 {
+  position: relative;
+  width: 85%;
+  height: 35px;
+  margin-top: 1%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  border-radius: 8px;
+  border: 2px solid #b6b6b6;
+}
+
+.ca-box-3 {
+  position: relative;
+  width: 85%;
+  height: 35px;
+  margin-top: 1%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  border-radius: 8px;
+  border: 2px solid #b6b6b6;
+}
+
+.ca-box-4 {
+  position: relative;
+  width: 85%;
+  height: 35px;
+  margin-top: 1%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  border-radius: 8px;
+  border: 2px solid #b6b6b6;
+}
+
+.ca-para-1 {
+  position: relative;
+  text-align: center;
+  font-size: 0.9rem;
+  font-family: Roboto;
+  font-weight: 500;
+  display: block;
+  top: 35px;
+  margin-left: -3.7%;
+  color: #000000;
+}
+
+.ca-para-2 {
+  position: relative;
+  text-align: center;
+  font-size: 0.9rem;
+  font-family: Roboto;
+  font-weight: 500;
+  display: block;
+  top: 40px;
+  margin-left: -6.7%;
+  color: #000000;
+  flex-wrap: nowrap;
+}
+
+.ca-para-3 {
+  position: relative;
+  text-align: center;
+  font-size: 0.9rem;
+  font-family: Roboto;
+  font-weight: 500;
+  display: block;
+  margin-top: 45px;
+  margin-left: -1%;
+  color: #000000;
+  flex-wrap: nowrap;
+}
+
+.ca-conbtn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+  width: 85%;
+  height: 35px;
+  background-color: #2e0052;
+  font-family: Roboto;
+  font-weight: 500;
+  color: #ffffff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.ca-para-4 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: Roboto;
+  font-weight: 400;
+  color: #000000;
+  font-size: 0.7rem;
+  text-align: center;
+  flex-wrap: nowrap;
+  margin-top: 8%;
+}
+
+.ca-para-5 {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: Roboto;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 1%;
+  text-decoration: none;
+  color: #000000;
+}
+
+.ca-footer {
+  position: relative;
+  height: 40px;
+  margin-top: 2.5%;
+  background-color: #2e0052;
+  text-align: center;
+  color: #ffffff;
+  font-family: Roboto;
+  font-weight: 400;
+  display: block;
+}
+
+@media screen and (max-width: 600px) {
+  .ca-hedder {
+    position: relative;
+    height: 48px;
+    background-color: #2e0052;
+    text-align: center;
+    z-index: -1;
+    font-family: Roboto;
+    font-weight: 400;
+    display: block;
+  }
+
+  .ca-res-para {
+    position: relative;
+    display: block;
+    margin-right: auto;
+    margin-left: 20%;
+    font-family: Roboto;
+    font-weight: 500;
+    color: #2e0052;
+    font-size: 1.5rem;
+    margin-top: 1%;
+  }
+  .ca-res-img {
+    display: block;
+    margin-top: -17%;
+    margin-left: 3%;
+    margin-right: auto;
+    width: 25%;
+    align-items: center;
+  }
+
+  .media-line {
+    position: relative;
+    margin-top: -5%;
+    margin-left: 35%;
+    font-family: Roboto;
+    font-size: 1rem;
+    font-weight: 300;
+    color: #000000;
+  }
+
+  .ca-para {
+    font-size: 3rem;
+  }
+
+  .brand-img {
+    display: none;
+  }
+
+  .ca-para {
+    font-size: 1rem;
+  }
+
+  .form-container {
+    display: block;
+    border: 1px solid #d9d9d9;
+    border-radius: 5px;
+    width: 60%;
+    margin: 0 auto;
+    height: 75vh;
+    margin-top: 6%;
+  }
+
+  .ca-para-1 {
+    font-size: 0.7rem;
+  }
+  .ca-para-2 {
+    font-size: 0.7rem;
+  }
+
+  .ca-para-3 {
+    font-size: 0.7rem;
+  }
+
+  .ca-conbtn {
+    margin-top: 3%;
+  }
+
+  .ca-para-4 {
+    margin-top: 1%;
+  }
+
+  .ca-para-5 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Roboto;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 1%;
+    text-decoration: none;
+    color: #000000;
+  }
+
+  .ca-footer {
+    position: relative;
+    height: 40px;
+    margin-top: 3%;
+    background-color: #2e0052;
+    text-align: center;
+    color: #ffffff;
+    font-family: Roboto;
+    font-weight: 400;
+    display: block;
+  }
+}
