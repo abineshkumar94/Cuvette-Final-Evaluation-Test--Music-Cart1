@@ -10,6 +10,8 @@ import line1 from "../images/Line 2.png";
 import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
+  const backendUrl = "https://backend-1-blue.vercel.app/api/v1/cart/"; 
+
   const location = useLocation();
   const cartId = location.state ? location.state.cartId : null;
   const [quantity, setQuantity] = useState(1);
@@ -23,9 +25,7 @@ const Cart = () => {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await axios.get(
-          `http://localhost:4000/api/v1/cart/${cartId}`
-        );
+        const response = await axios.get(`${backendUrl}${cartId}`);
         setproducts(response.data);
         localStorage.setItem("cartItems", JSON.stringify(response.data));
         console.log(localStorage.getItem("cartItems")); // Add this line
@@ -65,7 +65,6 @@ const Cart = () => {
   const CartToHome = () => {
     navigate(`/`);
   };
-
   return (
     <div>
       {/* <h3>price-₹{user.mobileNumber}</h3> */}

@@ -20,7 +20,7 @@ const Signin = () => {
 
     try {
       // Send a POST request to your login endpoint
-      const response = await axios.post("http://localhost:4000/api/v1/login", {
+      const response = await axios.post("https://backend-1-blue.vercel.app/api/v1/login", {
         email,
         password,
       });

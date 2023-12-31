@@ -43,7 +43,7 @@ const CreateAccount = () => {
     console.log("Password:", password);
 
     try {
-      const result = await axios.post("http://localhost:4000/api/v1/signup", {
+      const result = await axios.post("https://backend-1-blue.vercel.app/api/v1/signup", {
         name: name,
         mobileNumber: number,
         email: email,

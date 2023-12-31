@@ -15,6 +15,7 @@ import listv from "../images/list-rounded.svg";
 import cartIcon from "../images/cartIcon.png";
 
 const Home = () => {
+  const backendUrl = "https://backend-1-blue.vercel.app/api/v1/"; 
   const [products, setproducts] = useState([]);
   const [isGridView, setIsGridView] = useState(true);
   const [isListView, setIsListView] = useState(false);
@@ -32,7 +33,7 @@ const Home = () => {
     setHeadphoneType(event.target.value);
 
     fetch(
-      `http://localhost:4000/api/v1/products?headphoneType=${event.target.value}`
+      `${backendUrl}/products?headphoneType=${event.target.value}`
     )
       .then((res) => res.json())
       .then((data) => setproducts(data));
@@ -41,7 +42,7 @@ const Home = () => {
   const handleBrandChange = (event) => {
     setBrand(event.target.value);
 
-    fetch(`http://localhost:4000/api/v1/products?brand=${event.target.value}`)
+    fetch(`${backendUrl}products?brand=${event.target.value}`)
       .then((res) => res.json())
       .then((data) => setproducts(data));
   };
@@ -50,7 +51,7 @@ const Home = () => {
     setColour(event.target.value);
 
     fetch(
-      `http://localhost:4000/api/v1/products?colour=${event.target.value}&minPrice=${minPrice}&maxPrice=${maxPrice}`
+      `${backendUrl}products?colour=${event.target.value}&minPrice=${minPrice}&maxPrice=${maxPrice}`
     )
       .then((res) => res.json())
       .then((data) => setproducts(data));
@@ -62,7 +63,7 @@ const Home = () => {
     setMaxPrice(Number(max));
 
     fetch(
-      `http://localhost:4000/api/v1/products?colour=${colour}&minPrice=${min}&maxPrice=${max}`
+      `${backendUrl}products?colour=${colour}&minPrice=${min}&maxPrice=${max}`
     )
       .then((res) => res.json())
       .then((data) => setproducts(data));
@@ -72,7 +73,7 @@ const Home = () => {
     setSort(event.target.value);
 
     fetch(
-      `http://localhost:4000/api/v1/products?colour=${colour}&minPrice=${minPrice}&maxPrice=${maxPrice}&sort=${event.target.value}`
+      `${backendUrl}products?colour=${colour}&minPrice=${minPrice}&maxPrice=${maxPrice}&sort=${event.target.value}`
     )
       .then((res) => res.json())
       .then((data) => setproducts(data));
@@ -115,7 +116,7 @@ const Home = () => {
   };
 
   useEffect(() => {
-    fetch("http://localhost:4000/api/v1/products")
+    fetch(`${backendUrl}products`)
       .then((res) => res.json())
       .then((data) => setproducts(data));
   }, []);

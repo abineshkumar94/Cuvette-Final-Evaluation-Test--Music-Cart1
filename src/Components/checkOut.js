@@ -9,6 +9,7 @@ import { useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 
 const CheckOut = () => {
+  const backendUrl = "https://backend-1-blue.vercel.app/api/v1/buyNow/";
   const { isLoggedIn, handleLogout } = useContext(AuthContext);
   const { id } = useParams();
   const [product, setProduct] = useState(null);
@@ -26,9 +27,7 @@ const CheckOut = () => {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await axios.get(
-          `http://localhost:4000/api/v1/buyNow/${id}`
-        );
+        const response = await axios.get(`${backendUrl}${id}`);
         setProduct(response.data);
       } catch (error) {
         console.error("Error fetching product details:", error);
@@ -140,5 +139,3 @@ const CheckOut = () => {
 };
 
 export default CheckOut;
-
-

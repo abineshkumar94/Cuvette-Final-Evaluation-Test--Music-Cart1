@@ -13,6 +13,7 @@ import leftAro from "../images/leftaro.png";
 import search from "../images/search.png";
 
 const ProductDetails = () => {
+  const backendUrl = "https://backend-1-blue.vercel.app/api/v1/productdetails/"; 
   const { isLoggedIn, handleLogout } = useContext(AuthContext);
   const [product, setProduct] = useState(null);
   const { id } = useParams();
@@ -23,7 +24,7 @@ const ProductDetails = () => {
       try {
         console.log("Product ID:", id);
         const response = await axios.get(
-          `http://localhost:4000/api/v1/productdetails/${id}`
+          `${backendUrl}${id}`
         );
         setProduct(response.data);
       } catch (error) {
