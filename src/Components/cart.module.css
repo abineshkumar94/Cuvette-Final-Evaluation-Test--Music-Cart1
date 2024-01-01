@@ -12,11 +12,27 @@
   cursor: pointer;
 }
 
+.cartMusicimg {
+  display: none;
+}
+
 .mycartimg {
   position: relative;
   margin-top: 3%;
   width: 10%;
   margin-left: 45%;
+}
+
+.backBtnMedia {
+  position: relative;
+  width: 8%;
+  height: 5%;
+  margin-left: 3%;
+  margin-top: 3%;
+  border: none;
+  background: #ffffff;
+  cursor: pointer;
+  display: none;
 }
 
 .cartImgBox {
@@ -55,6 +71,10 @@
   font-weight: 600;
 }
 
+.pdPriceMedia1 {
+  display: none;
+}
+
 .cartPdclr {
   margin-left: 28%;
   display: flex;
@@ -75,13 +95,29 @@
   margin-top: 1%;
 }
 
+.conveFeeMedia {
+  display: none;
+}
+
+.cartTotalmedia {
+  display: none;
+}
+
+.horizontalLineMedia {
+  display: none;
+}
+
+.finalTotalMedia {
+  display: none;
+}
+
 .cartItem1 {
-    position: relative;
-    display: flex;
-    margin-left: 28%;
-    margin-top: 12%;
-    font-family: Roboto;
-    font-weight: 600;
+  position: relative;
+  display: flex;
+  margin-left: 28%;
+  margin-top: 12%;
+  font-family: Roboto;
+  font-weight: 600;
 }
 
 .cartPdPrice {
@@ -124,30 +160,30 @@
 }
 
 .cartTotal {
-    position: relative;
-    display: flex;
-    margin-left: 60%;
-    margin-top: -4%;
-    font-family: Roboto;
-    font-weight: 600; 
+  position: relative;
+  display: flex;
+  margin-left: 60%;
+  margin-top: -4%;
+  font-family: Roboto;
+  font-weight: 600;
 }
 
 .cartTotalPrice {
-    position: relative;
-    display: flex;
-    margin-left: 60%;
-    margin-top: 1%;
-    font-family: Roboto;
-    font-weight: 600;
+  position: relative;
+  display: flex;
+  margin-left: 60%;
+  margin-top: 1%;
+  font-family: Roboto;
+  font-weight: 600;
 }
 
 .cartFinalTotalPrice {
-    position: relative;
-    display: flex;
-    margin-left: 60%;
-    margin-top: 14.5%;
-    font-family: Roboto;
-    font-weight: 600;
+  position: relative;
+  display: flex;
+  margin-left: 60%;
+  margin-top: 14.5%;
+  font-family: Roboto;
+  font-weight: 600;
 }
 
 .horizontalLine2 {
@@ -159,52 +195,236 @@
 }
 
 .rightSideDetails {
-    position: relative;
-    display: flex;
-    margin-left: 75%;
-    margin-top: -21%;
-    font-family: Roboto;
-    font-weight: 600;
+  position: relative;
+  display: flex;
+  margin-left: 75%;
+  margin-top: -21%;
+  font-family: Roboto;
+  font-weight: 600;
 }
 
 .totalMrp {
-    position: relative;
-    display: flex;
-    margin-top: 16%;
-    margin-left: -30%;
-    
+  position: relative;
+  display: flex;
+  margin-top: 16%;
+  margin-left: -30%;
 }
 
 .conveFee {
-    position: relative;
-    display: flex;
-    margin-top: 40%;
-    margin-left: -38%;
+  position: relative;
+  display: flex;
+  margin-top: 40%;
+  margin-left: -38%;
 }
 
 .discount {
-    position: relative;
-    display: flex;
-    margin-top: 28%;
-    margin-left: -40%;
+  position: relative;
+  display: flex;
+  margin-top: 28%;
+  margin-left: -40%;
 }
 
 .finalTotal {
-    position: relative;
-    display: flex;
-    margin-top: 78%;
-    margin-left: -40%;
+  position: relative;
+  display: flex;
+  margin-top: 78%;
+  margin-left: -40%;
 }
 
 .placeOrderbtn {
+  position: relative;
+  display: flex;
+  padding: 10px 50px;
+  font-family: Roboto;
+  color: #000000;
+  margin-left: 75%;
+  margin-top: 3%;
+  background-color: #ffd600;
+  border: none;
+  border-radius: 8px;
+}
+
+@media screen and (max-width: 600px) {
+  
+  .cartMusicimg {
+    margin-top: 2%;
+    margin-left: 2%;
+    display: block;
+    width: 23%;
+  }
+
+  .backBtnMedia {
+    position: relative;
+    width: 8%;
+    height: 5%;
+    margin-left: 3%;
+    margin-top: 3%;
+    border: none;
+    background: #ffffff;
+    cursor: pointer;
+    display: block;
+  }
+
+  .horizontalLine1 {
+    display: none;
+  }
+
+  .cartItem1 {
+    display: none;
+  }
+
+  .cartPdPrice {
+    display: none;
+  }
+
+  .priceNumbers {
+    display: none;
+  }
+
+  .cartQuantity {
+    display: none;
+  }
+
+  .carddrop {
+    display: none;
+  }
+
+  .carddropStyle {
+    display: none;
+  }
+
+  .mycartimg {
+    display: none;
+  }
+
+  .cartTotal {
+    display: none;
+  }
+
+  .cartTotalPrice {
+    display: none;
+  }
+
+  .cartFinalTotalPrice {
+    display: none;
+  }
+
+  .horizontalLine2 {
+    display: none;
+  }
+
+  .rightSideDetails {
+    display: none;
+  }
+
+  .totalMrp {
+    display: none;
+  }
+
+  .cartImgBox {
+    width: 85%;
+    height: 55vh;
+    display: flex;
+    margin-left: 7%;
+    margin-top: 5%;
+    margin-bottom: 8%;
+    background-color: #dbdbdb;
+    border: none;
+  }
+
+  .cartProductImg {
+    position: relative;
+    width: 38%;
+    height: 30vh;
+    margin-left: 6%;
+    margin-top: 5%;
+  }
+
+  .cartMname {
+    position: relative;
+    display: flex;
+    margin-left: 47%;
+    margin-top: -53%;
+    font-family: Roboto;
+    font-weight: 600;
+    font-size: 1.5em;
+  }
+
+  .pdPriceMedia1 {
+    position: relative;
+    display: flex;
+    margin-left: 47%;
+    margin-top: 1%;
+    font-family: Roboto;
+    font-weight: 600;
+    font-size: 1.2em;
+  }
+
+  .cartPdclr {
+    margin-left: 47%;
+    display: flex;
+    position: relative;
+    color: #000000;
+    font-family: Roboto;
+    font-weight: 400;
+    margin-top: 1%;
+  }
+
+  .cartPdStock {
+    margin-left: 47%;
+    display: flex;
+    position: relative;
+    color: #000000;
+    font-family: Roboto;
+    font-weight: 400;
+    margin-top: 1%;
+  }
+
+  .conveFeeMedia {
+    position: relative;
+    display: flex;
+    margin-top: 1%;
+    margin-left: 47%;
+  }
+
+  .cartTotalmedia {
+    position: relative;
+    display: flex;
+    margin-left: 47%;
+    margin-top: 8%;
+    font-family: Roboto;
+    font-weight: 400;
+  }
+
+  .horizontalLineMedia {
+    display: flex;
+    width: 93%;
+    height: 0.3vh;
+    margin-left: 3%;
+    margin-top: 18%;
+    background-color: #000000;
+  }
+
+  .finalTotalMedia {
+    position: relative;
+    display: flex;
+    margin-top: 2%;
+    margin-left: 3%;
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 1.2em;
+  }
+
+  .placeOrderbtn {
     position: relative;
     display: flex;
     padding: 10px 50px;
     font-family: Roboto;
     color: #000000;
-    margin-left: 75%;
-    margin-top: 3%;
+    margin-left: 35%;
+    margin-top: 5%;
     background-color: #ffd600;
     border: none;
     border-radius: 8px;
+  }
 }

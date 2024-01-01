@@ -8,9 +8,11 @@ import { useLocation } from "react-router-dom";
 import myCartimg from "../images/Group 26.png";
 import line1 from "../images/Line 2.png";
 import { useNavigate } from "react-router-dom";
+import leftAro from "../images/leftaro.png";
+import music1 from "../images/Group 30.png";
 
 const Cart = () => {
-  const backendUrl = "https://backend-1-blue.vercel.app/api/v1/cart/"; 
+  const backendUrl = "https://backend-1-blue.vercel.app/api/v1/cart/";
 
   const location = useLocation();
   const cartId = location.state ? location.state.cartId : null;
@@ -70,6 +72,11 @@ const Cart = () => {
       {/* <h3>price-₹{user.mobileNumber}</h3> */}
       <p className="navpara-1">Get 50% off on selected items | Shop Now </p>
       <nav>
+        <img
+        src= {music1}
+        alt="just an img"
+        className= {styles.cartMusicimg}
+        />
         {!isLoggedIn ? (
           <>
             <Link to="/signin">Signup</Link>
@@ -91,6 +98,10 @@ const Cart = () => {
         </button>
       </div>
 
+      <button className={styles.backBtnMedia } onClick={CartToHome} >
+          <img src={leftAro} alt="just a aro"  />
+        </button>
+
       <img src={myCartimg} alt="" className={styles.mycartimg} />
 
       <div>
@@ -106,9 +117,22 @@ const Cart = () => {
             </div>
             <div>
               <p className={styles.cartMname}> {product.heading} </p>
+              <p className={styles.pdPriceMedia1}>₹ {product.price} </p>
               <h4 className={styles.cartPdclr}>Clour : {product.colour}</h4>
               <h4 className={styles.cartPdStock}>In Stock</h4>
+              <p className={styles.conveFeeMedia}>
+                Convenience Fee&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ₹ 45
+              </p>
+              <p className={styles.cartTotalmedia}>
+                Total:
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;₹{" "}
+                {product.price + 45}
+              </p>
               <p className={styles.cartItem1}>1 Item</p>
+              <span className={styles.horizontalLineMedia}></span>
+              <p className={styles.finalTotalMedia}>
+                Total Amount ₹ {product.price + 45}
+              </p>
             </div>
             <div>
               <p className={styles.cartPdPrice}>Price</p>
@@ -161,9 +185,11 @@ const Cart = () => {
             >
               PLACE ORDER
             </button>
+            <div style={{ height: '10vh' }}></div>
           </div>
         ))}
       </div>
+      <div className="homeFotter">Musicart | All rights reserved</div>
     </div>
   );
 };
