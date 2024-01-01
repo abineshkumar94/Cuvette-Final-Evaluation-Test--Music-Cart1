@@ -121,11 +121,11 @@ const Cart = () => {
               <h4 className={styles.cartPdclr}>Clour : {product.colour}</h4>
               <h4 className={styles.cartPdStock}>In Stock</h4>
               <p className={styles.conveFeeMedia}>
-                Convenience Fee&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ₹ 45
+                Convenience Fee&nbsp;&nbsp;&nbsp;&nbsp; ₹ 45
               </p>
               <p className={styles.cartTotalmedia}>
                 Total:
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;₹{" "}
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;₹{" "}
                 {product.price + 45}
               </p>
               <p className={styles.cartItem1}>1 Item</p>
