@@ -656,88 +656,89 @@
     margin-left: 19%;
     height: 6vh;
   }
+}
 
-  @media screen and (max-width: 400px) {
-    .checkoutMusicimg {
-      margin-top: 3%;
-      margin-left: 3%;
-      display: block;
-      width: 30%;
-    }
-  
-    .deliAdd {
-      position: relative;
-      font-family: Roboto;
-      font-weight: 500;
-      font-size: 20px;
-      line-height: 41px;
-      margin-top: 3%;
-    }
-  
-    .personAdd {
-      margin-left: -43%;
-      margin-top: 13%;
-      font-size: 15px;
-    }
-  
-    .payMentMethod {
-      position: relative;
-      font-family: Roboto;
-      font-weight: 500;
-      font-size: 20px;
-      line-height: 41px;
-      color: #b52b00;
-      margin-top: 2%;
-      margin-left: 5%;
-    }
-  
-    .paymentType {
-      position: relative;
-      font-family: Roboto;
-      font-weight: 400;
-      margin-left: 12%;
-      color: #797979;
-      flex-wrap: wrap;
-      margin-top: 0%;
-      font-size: 15px;
-    }
-  
-    .rind {
-      position: relative;
-      font-family: Roboto;
-      font-weight: 500;
-      font-size: 20px;
-      line-height: 41px;
-      color: #b52b00;
-      margin-top: 2%;
-      margin-left: 5%;
-    }
-  
-    .checkOutImgBox {
-      width: 38%;
-      height: 23vh;
-      border: 2px solid #2e0052;
-      display: flex;
-      margin-left: 8%;
-      margin-top: 1%;
-      border-radius: 7px;
-      margin-bottom: 8%;
-    }
-  
-    .checkOutProductImg {
-      position: relative;
-      width: 90%;
-      height: 18vh;
-      margin-left: 4%;
-      margin-top: 7%;
-    }
-  
-    .checkOutLine2 {
-      margin-top: -36%;
-    }
-  
-    .PlaceUrOdrBtnMedia {
-      margin-left: 19%;
-      height: 6vh;
-    }
+@media screen and (max-width: 400px) {
+  .checkoutMusicimg {
+    margin-top: 3%;
+    margin-left: 3%;
+    display: block;
+    width: 30%;
+  }
+
+  .deliAdd {
+    position: relative;
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 41px;
+    margin-top: 3%;
+  }
+
+  .personAdd {
+    margin-left: -43%;
+    margin-top: 13%;
+    font-size: 15px;
+  }
+
+  .payMentMethod {
+    position: relative;
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 41px;
+    color: #b52b00;
+    margin-top: 2%;
+    margin-left: 5%;
+  }
+
+  .paymentType {
+    position: relative;
+    font-family: Roboto;
+    font-weight: 400;
+    margin-left: 12%;
+    color: #797979;
+    flex-wrap: wrap;
+    margin-top: 0%;
+    font-size: 15px;
+  }
+
+  .rind {
+    position: relative;
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 41px;
+    color: #b52b00;
+    margin-top: 2%;
+    margin-left: 5%;
+  }
+
+  .checkOutImgBox {
+    width: 38%;
+    height: 23vh;
+    border: 2px solid #2e0052;
+    display: flex;
+    margin-left: 8%;
+    margin-top: 1%;
+    border-radius: 7px;
+    margin-bottom: 8%;
+  }
+
+  .checkOutProductImg {
+    position: relative;
+    width: 90%;
+    height: 18vh;
+    margin-left: 4%;
+    margin-top: 7%;
+  }
+
+  .checkOutLine2 {
+    margin-top: -36%;
+  }
+
+  .PlaceUrOdrBtnMedia {
+    margin-left: 19%;
+    height: 6vh;
+  }
 }
