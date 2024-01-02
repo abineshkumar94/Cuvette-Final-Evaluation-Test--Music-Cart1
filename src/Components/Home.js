@@ -32,6 +32,7 @@ const Home = () => {
   const [colour, setColour] = useState("");
   const [minPrice, setMinPrice] = useState("");
   const [maxPrice, setMaxPrice] = useState("");
+  const [searchQuery, setSearchQuery] = useState("");
 
   const handleHeadphoneTypeChange = (event) => {
     setHeadphoneType(event.target.value);
@@ -79,6 +80,32 @@ const Home = () => {
     )
       .then((res) => res.json())
       .then((data) => setproducts(data));
+  };
+
+  useEffect(() => {
+    console.log(products);
+  }, [products]);
+
+  const handleSearchSubmit = (event) => {
+    event.preventDefault();
+    fetch(`${backendUrl}products?search=${searchQuery}`)
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return res.json();
+      })
+      .then((data) => {
+        console.log(data);
+        setproducts(data);
+        console.log(products);
+      })
+      .catch((error) => {
+        console.error(
+          "There has been a problem with your fetch operation:",
+          error
+        );
+      });
   };
 
   const handleGridClick = () => {
@@ -169,11 +196,17 @@ const Home = () => {
         <img src={cimgthree} alt="" className="container-img-3" />
       </div>
 
-      <form className="search-container">
+      <form className="search-container" onSubmit={handleSearchSubmit}>
         <button type="submit">
           <img src={search} alt="search-icon" className="" />
         </button>
-        <input type="text" placeholder="Search Product" className="" />
+        <input
+          type="text"
+          placeholder="Search Product"
+          className=""
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+        />
       </form>
 
       <button className="grid-btn1" onClick={handleGridClick}>
