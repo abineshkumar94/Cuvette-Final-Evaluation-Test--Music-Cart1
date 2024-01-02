@@ -13,9 +13,13 @@ import search from "../images/search.png";
 import gridv from "../images/grid-view-rounded.svg";
 import listv from "../images/list-rounded.svg";
 import cartIcon from "../images/cartIcon.png";
+import homeMedia from "../images/mediahome.png";
+import cartMedia from "../images/mediacart.png";
+import logoutMedia from "../images/medialogout.png";
+import loginMedia from "../images/medialogin.png";
 
 const Home = () => {
-  const backendUrl = "https://backend-1-blue.vercel.app/api/v1/"; 
+  const backendUrl = "https://backend-1-blue.vercel.app/api/v1/";
   const [products, setproducts] = useState([]);
   const [isGridView, setIsGridView] = useState(true);
   const [isListView, setIsListView] = useState(false);
@@ -32,9 +36,7 @@ const Home = () => {
   const handleHeadphoneTypeChange = (event) => {
     setHeadphoneType(event.target.value);
 
-    fetch(
-      `${backendUrl}/products?headphoneType=${event.target.value}`
-    )
+    fetch(`${backendUrl}/products?headphoneType=${event.target.value}`)
       .then((res) => res.json())
       .then((data) => setproducts(data));
   };
@@ -93,6 +95,14 @@ const Home = () => {
     navigate("/Cart ");
   };
 
+  const iamHome = () => {
+    navigate("/");
+  };
+
+  const goToSignIn = () => {
+    navigate("/Signin ");
+  };
+
   <Link
     to={{
       pathname: "/Cart",
@@ -124,7 +134,7 @@ const Home = () => {
   const [sort, setSort] = useState("");
 
   return (
-    <div className="parentdiv" >
+    <div className="parentdiv">
       {/* <h3>price-₹{user.mobileNumber}</h3> */}
       <p className="navpara-1">Get 50% off on selected items | Shop Now </p>
       <nav>
@@ -282,11 +292,17 @@ const Home = () => {
               )}
             </div>
             <div className={isGridView ? "" : "listViewProductDetails"}>
-              <h2 className="pdDetailsfont " >{product.heading}</h2>
-              <h3 className="pdDetailsfont " >price-₹{product.price}</h3>
-              <p className="pdDetailsfont " >colour :{product.colour}</p>
-              <p className="pdDetailsfont " >headphoneType | {product.headphoneType}</p>
-              <p className={`${isGridView ? "gridViewPara" : "listViewPara"} pdDetailsfont`}>
+              <h2 className="pdDetailsfont ">{product.heading}</h2>
+              <h3 className="pdDetailsfont ">price-₹{product.price}</h3>
+              <p className="pdDetailsfont ">colour :{product.colour}</p>
+              <p className="pdDetailsfont ">
+                headphoneType | {product.headphoneType}
+              </p>
+              <p
+                className={`${
+                  isGridView ? "gridViewPara" : "listViewPara"
+                } pdDetailsfont`}
+              >
                 {" "}
                 {product.detailHeading}{" "}
               </p>
@@ -300,15 +316,63 @@ const Home = () => {
                 Details
               </button>
 
-              <div style={{ height: '10vh' }}></div>
+              <div style={{ height: "10vh" }}></div>
             </div>
           </div>
         ))}
       </div>
-     
-      <div className="homeFotter">Musicart | All rights reserved</div>
+
+      <div className="homeFotter">
+        <span className="footerText">Musicart | All rights reserved</span>
+        <button className="home-media-btn">
+          <img
+            src={homeMedia}
+            alt="mediaicon"
+            className="home-media"
+            onClick={iamHome}
+          />
+        </button>
+        <button className="cartmediabtn">
+          <img
+            src={cartMedia}
+            alt="cartmedia"
+            className="cartmedia"
+            onClick={goToCart}
+          />
+        </button>
+        {!isLoggedIn ? (
+          <>
+            <button className="loginmediabtn ">
+              <img
+                src={loginMedia}
+                alt="cartmedia"
+                className="loginmedia"
+                onClick={goToSignIn}
+              />
+            </button>
+          </>
+        ) : (
+          <button className="logoutmediabtn ">
+            <img
+              src={logoutMedia}
+              alt="cartmedia"
+              className=" logoutmedia"
+              onClick={handleLogout}
+            />
+          </button>
+        )}
+      </div>
     </div>
   );
 };
 
 export default Home;
+
+{
+  /* <button className="logoutmediabtn " >
+          <img src= {logoutMedia} alt="cartmedia" className=" logoutmedia" onClick={handleLogout} />
+        </button>
+        <button className="loginmediabtn " >
+          <img src= {loginMedia } alt="cartmedia" className="loginmedia" onClick={goToSignIn}/>
+        </button> */
+}

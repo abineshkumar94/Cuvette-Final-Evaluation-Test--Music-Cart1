@@ -8,6 +8,7 @@ import Home from "./Components/Home";
 import ProductDetails from "./Components/ProductDetails";
 import Cart from "./Components/Cart";
 import CheckOut from "./Components/checkOut";
+import Successful from "./Components/Successful";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(() => {
@@ -35,6 +36,7 @@ function App() {
           <Route path="productDetails/:id" element={<ProductDetails />} />
           <Route path="cart" element={<Cart />} />
           <Route path="/checkOut/:id" element={<CheckOut />} />
+          <Route path="Successful" element={<Successful/>} />
         </Routes>
       </AuthContext.Provider>
     </div>

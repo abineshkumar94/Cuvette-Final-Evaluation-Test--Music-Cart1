@@ -9,6 +9,10 @@ import { useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import music1 from "../images/Group 30.png";
 import leftAro from "../images/leftaro.png";
+import homeMedia from "../images/mediahome.png";
+import cartMedia from "../images/mediacart.png";
+import logoutMedia from "../images/medialogout.png";
+import loginMedia from "../images/medialogin.png";
 
 const CheckOut = () => {
   const backendUrl = "https://backend-1-blue.vercel.app/api/v1/buyNow/";
@@ -19,6 +23,19 @@ const CheckOut = () => {
 
   const backToCart = () => {
     navigate("/Cart ");
+  };
+
+  const towardsHome = () => {
+    navigate("/ ");
+  };
+
+  const backTosignin = () => {
+    navigate("/ Signin");
+  };
+
+
+  const successfullPage = () => {
+    navigate("/Successful");
   };
 
   const CheckOut = () => {
@@ -121,14 +138,14 @@ const CheckOut = () => {
               Order Total : ₹ {product.price + 45}{" "}
             </p>
           </div>
-          <button className={styles.PlaceUrOdrBtnMedia}>
+          <button className={styles.PlaceUrOdrBtnMedia} onClick={successfullPage } >
             Place your order
           </button>
           <div style={{ height: "10vh" }}></div>
           <div className={styles.checkOutLine2} />
 
           <div className={styles.checkoutPlaceOdr1}>
-            <button className={styles.PlaceUrOdrBtn1}>Place your order</button>
+            <button className={styles.PlaceUrOdrBtn1} onClick={successfullPage } >Place your order</button>
             <p className={styles.checkoutAtoMt1}>
               Order Total : ₹ {product.price + 45}{" "}
             </p>
@@ -157,7 +174,48 @@ const CheckOut = () => {
         </div>
       )}
       
-      <div className="homeFotter">Musicart | All rights reserved</div>
+      <div className={styles.homeFotterCartMedia}>
+        <span className={styles.footerTextCartMedia}>
+          Musicart | All rights reserved
+        </span>
+        <button className={styles.homemediabtnCartMedia}>
+          <img
+            src={homeMedia}
+            alt="mediaicon"
+            className={styles.homemediaCartMedia}
+            onClick={towardsHome}
+          />
+        </button>
+        <button className={styles.cartmediabtnCartMedia}>
+          <img
+            src={cartMedia}
+            alt="cartmedia"
+            className={styles.cartmediaCartMedia}
+            onClick={backToCart}
+          />
+        </button>
+        {!isLoggedIn ? (
+          <>
+            <button className={styles.loginmediabtnCartMedia}>
+              <img
+                src={loginMedia}
+                alt="cartmedia"
+                className={styles.loginmediaCartMedia}
+                onClick={backTosignin}
+              />
+            </button>
+          </>
+        ) : (
+          <button className={styles.logoutmediabtnCartMedia}>
+            <img
+              src={logoutMedia}
+              alt="cartmedia"
+              className={styles.logoutmediaCartMedia}
+              onClick={handleLogout}
+            />
+          </button>
+        )}
+      </div>
     
     </div>
   );

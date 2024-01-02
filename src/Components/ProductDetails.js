@@ -11,6 +11,10 @@ import viewCartBtn from "../images/Group 25.png";
 import stars from "../images/stars.png";
 import leftAro from "../images/leftaro.png";
 import search from "../images/search.png";
+import homeMedia from "../images/mediahome.png";
+import cartMedia from "../images/mediacart.png";
+import logoutMedia from "../images/medialogout.png";
+import loginMedia from "../images/medialogin.png";
 
 const ProductDetails = () => {
   const backendUrl = "https://backend-1-blue.vercel.app/api/v1/productdetails/"; 
@@ -95,7 +99,7 @@ const ProductDetails = () => {
       </nav>
 
       <img src={Music} alt="" className={styles.pdMusic} />
-      <p className="navpara-2">Home /</p>
+      <p className="navpara-2">Home / Prodectdetails</p>
 
       {isLoggedIn && (
         <button className="view-cart-btn ">
@@ -209,7 +213,48 @@ const ProductDetails = () => {
       />
       <ToastContainer />
 
-      <div className="homeFotter">Musicart | All rights reserved</div>
+      <div className={styles.homeFotterCartMedia}>
+        <span className={styles.footerTextCartMedia}>
+          Musicart | All rights reserved
+        </span>
+        <button className={styles.homemediabtnCartMedia}>
+          <img
+            src={homeMedia}
+            alt="mediaicon"
+            className={styles.homemediaCartMedia}
+            onClick={goToHome}
+          />
+        </button>
+        <button className={styles.cartmediabtnCartMedia}>
+          <img
+            src={cartMedia}
+            alt="cartmedia"
+            className={styles.cartmediaCartMedia}
+            onClick={PdViewCart}
+          />
+        </button>
+        {!isLoggedIn ? (
+          <>
+            <button className={styles.loginmediabtnCartMedia}>
+              <img
+                src={loginMedia}
+                alt="cartmedia"
+                className={styles.loginmediaCartMedia}
+                onClick={goToSign }
+              />
+            </button>
+          </>
+        ) : (
+          <button className={styles.logoutmediabtnCartMedia}>
+            <img
+              src={logoutMedia}
+              alt="cartmedia"
+              className={styles.logoutmediaCartMedia}
+              onClick={handleLogout}
+            />
+          </button>
+        )}
+      </div>
     </div>
   );
 };

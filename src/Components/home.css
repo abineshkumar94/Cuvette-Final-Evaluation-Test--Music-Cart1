@@ -145,7 +145,7 @@ nav a {
 }
 
 .grid-btn1 {
-  margin-left: 15%;
+  margin-left: 12%;
   width: 3%;
   height: auto;
   background-color: #ffffff;
@@ -178,8 +178,8 @@ nav a {
   border-radius: 30px;
   border: none;
   outline: none;
-  margin-top: 3%;
-  margin-left: 10%;
+  margin-top: 0%;
+  margin-left: 23%;
   padding: 10px;
 }
 
@@ -197,7 +197,7 @@ nav a {
   border-radius: 30px;
   border: none;
   outline: none;
-  margin-top: 3%;
+  margin-top: 0%;
   margin-left: 2%;
   padding: 10px;
 }
@@ -216,7 +216,7 @@ nav a {
   border-radius: 30px;
   border: none;
   outline: none;
-  margin-top: 3%;
+  margin-top: 0%;
   margin-left: 13%;
   padding: 10px;
 }
@@ -235,7 +235,7 @@ nav a {
   border-radius: 30px;
   border: none;
   outline: none;
-  margin-top: 3%;
+  margin-top: 0%;
   margin-left: 24%;
   padding: 10px;
 }
@@ -254,7 +254,7 @@ nav a {
   border: 3px solid #e1e1e1;
   outline: none;
   background: #ffffff;
-  margin-top: 3%;
+  margin-top: 0%;
   margin-left: 37%;
   padding: 10px;
 }
@@ -293,8 +293,6 @@ nav a {
   justify-content: center;
   cursor: pointer;
 }
-
-
 
 .green-cart {
   border: none;
@@ -399,7 +397,22 @@ nav a {
   text-align: center;
   padding: 1.5vh 0;
   font-size: 1em;
- 
+}
+
+.home-media-btn {
+  display: none;
+} 
+
+.cartmediabtn{
+  display: none;
+}
+
+.loginmediabtn  {
+  display: none;
+}
+
+.logoutmediabtn  {
+  display: none;
 }
 
 @media screen and (max-width: 600px) {
@@ -410,7 +423,6 @@ nav a {
     height: 60px;
     z-index: 1;
     top: 0%;
-   
   }
 
   .navpara-1 {
@@ -569,7 +581,6 @@ nav a {
     margin-top: 3%;
     margin-left: 4%;
     padding: 10px;
-    
   }
 
   .ddown-container-2 {
@@ -587,9 +598,9 @@ nav a {
     border: none;
     outline: none;
     margin-top: 3%;
-    
+
     padding: 10px;
-    margin-left:5%;
+    margin-left: 5%;
   }
 
   .ddown-container-3 {
@@ -672,8 +683,95 @@ nav a {
   .pdDetailsfont {
     font-size: 1em;
   }
-}
 
+  .homeFotter {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #ffffff;
+    color: white;
+    text-align: center;
+    padding: 1.5vh 0;
+    font-size: 1em;
+    height: 4%;
+  }
+
+  .footerText {
+    display: none;
+  }
+
+  .home-media-btn {
+    position: relative;
+    left: 5%;
+    border: none;
+    background-color: #ffffff;
+    cursor: pointer;
+    display: block;
+  }
+
+  .home-media {
+    position: relative;
+    width: 100%;
+    height: 6vh;
+    margin-left: -3%;
+    margin-top: -23%;
+  }
+
+  .cartmediabtn {
+    position: relative;
+    left: 0%;
+    border: none;
+    background-color: #ffffff;
+    cursor: pointer;
+    margin-top: -2%;
+    display: block;
+  }
+
+  .cartmedia {
+    position: relative;
+    width: 100%;
+    height: 6vh;
+    margin-left: 795%;
+    margin-top: -60%;
+  }
+
+  .logoutmediabtn {
+    position: relative;
+    left: 26%;
+    border: none;
+    background-color: #ffffff;
+    cursor: pointer;
+    margin-top: -2%;
+    display: block;
+  }
+
+  .logoutmedia {
+    position: relative;
+    width: 100%;
+    height: 6vh;
+    margin-left: 765%;
+    margin-top: -60%;
+  }
+
+  .loginmediabtn {
+    position: relative;
+    left: 26%;
+    border: none;
+    background-color: #ffffff;
+    cursor: pointer;
+    margin-top: -2%;
+    display: block;
+  }
+
+  .loginmedia {
+    position: relative;
+    width: 100%;
+    height: 6vh;
+    margin-left: 765%;
+    margin-top: -60%;
+  }
+}
 
 @media screen and (max-width: 360px) {
   nav {
@@ -683,7 +781,6 @@ nav a {
     height: 60px;
     z-index: 1;
     top: 0%;
-   
   }
 
   .navpara-1 {
@@ -842,7 +939,6 @@ nav a {
     margin-top: 3%;
     margin-left: 4%;
     padding: 0px;
-    
   }
 
   .ddown-container-2 {
@@ -860,9 +956,9 @@ nav a {
     border: none;
     outline: none;
     margin-top: 3%;
-    
+
     padding: 0px;
-    margin-left:5%;
+    margin-left: 5%;
   }
 
   .ddown-container-3 {
@@ -947,5 +1043,93 @@ nav a {
   .pdDetailsfont {
     font-size: 0.6em;
     margin-top: 5%;
+  }
+
+  .homeFotter {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #ffffff;
+    color: white;
+    text-align: center;
+    padding: 1.5vh 0;
+    font-size: 1em;
+    height: 4%;
+  }
+
+  .footerText {
+    display: none;
+  }
+
+  .home-media-btn {
+    position: relative;
+    left: 5%;
+    border: none;
+    background-color: #ffffff;
+    cursor: pointer;
+    display: block;
+  }
+
+  .home-media {
+    position: relative;
+    width: 100%;
+    height: 6vh;
+    margin-left: -3%;
+    margin-top: -23%;
+  }
+
+  .cartmediabtn {
+    position: relative;
+    left: 0%;
+    border: none;
+    background-color: #ffffff;
+    cursor: pointer;
+    margin-top:-3%;
+    display: block;
+  }
+
+  .cartmedia {
+    position: relative;
+    width: 100%;
+    height: 6vh;
+    margin-left: 445%;
+    margin-top: -65%;
+  }
+
+  .logoutmediabtn {
+    position: relative;
+    left: 26%;
+    border: none;
+    background-color: #ffffff;
+    cursor: pointer;
+    margin-top: -3%;
+    display: block;
+  }
+
+  .logoutmedia {
+    position: relative;
+    width: 100%;
+    height: 6vh;
+    margin-left: 428%;
+    margin-top: -60%;
+  }
+
+  .loginmediabtn {
+    position: relative;
+    left: 26%;
+    border: none;
+    background-color: #ffffff;
+    cursor: pointer;
+    margin-top: -2%;
+    display: block;
+  }
+
+  .loginmedia {
+    position: relative;
+    width: 100%;
+    height: 6vh;
+    margin-left: 765%;
+    margin-top: -60%;
   }
 }

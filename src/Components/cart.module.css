@@ -244,8 +244,36 @@
   border-radius: 8px;
 }
 
+.homeFotterCartMedia {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #2e0052;
+  color: white;
+  text-align: center;
+  padding: 1.5vh 0;
+  font-size: 1em;
+}
+
+.homemediabtnCartMedia {
+  display: none;
+}
+
+.cartmediabtnCartMedia {
+  display: none;
+}
+
+.loginmediabtnCartMedia{
+  display: none;
+}
+
+.logoutmediabtnCartMedia {
+  display: none;
+}
+
+
 @media screen and (max-width: 600px) {
-  
   .cartMusicimg {
     margin-top: 2%;
     margin-left: 2%;
@@ -427,6 +455,94 @@
     border: none;
     border-radius: 8px;
   }
+
+  .homeFotterCartMedia {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #ffffff;
+    color: white;
+    text-align: center;
+    padding: 1.5vh 0;
+    font-size: 1em;
+    height: 4%;
+  }
+
+  .footerTextCartMedia {
+    display: none;
+  }
+
+  .homemediabtnCartMedia {
+    position: relative;
+    left: 5%;
+    border: none;
+    background-color: #ffffff;
+    cursor: pointer;
+    display: block;
+  }
+
+  .homemediaCartMedia {
+    position: relative;
+    width: 100%;
+    height: 6vh;
+    margin-left: -3%;
+    margin-top: -23%;
+  }
+
+  .cartmediabtnCartMedia {
+    position: relative;
+    left: 0%;
+    border: none;
+    background-color: #ffffff;
+    cursor: pointer;
+    margin-top: -2%;
+    display: block;
+  }
+
+  .cartmediaCartMedia {
+    position: relative;
+    width: 100%;
+    height: 6vh;
+    margin-left: 795%;
+    margin-top: -60%;
+  }
+
+  .logoutmediabtnCartMedia {
+    position: relative;
+    left: 26%;
+    border: none;
+    background-color: #ffffff;
+    cursor: pointer;
+    margin-top: -2%;
+    display: block;
+  }
+
+  .logoutmediaCartMedia {
+    position: relative;
+    width: 100%;
+    height: 6vh;
+    margin-left: 765%;
+    margin-top: -60%;
+  }
+
+  .loginmediabtnCartMedia {
+    position: relative;
+    left: 26%;
+    border: none;
+    background-color: #ffffff;
+    cursor: pointer;
+    margin-top: -2%;
+    display: block;
+  }
+
+  .loginmediaCartMedia {
+    position: relative;
+    width: 100%;
+    height: 6vh;
+    margin-left: 765%;
+    margin-top: -60%;
+  }
 }
 
 @media screen and (max-width: 360px) {
@@ -554,5 +670,93 @@
     background-color: #ffd600;
     border: none;
     border-radius: 8px;
+  }
+
+  .homeFotterCartMedia {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #ffffff;
+    color: white;
+    text-align: center;
+    padding: 1.5vh 0;
+    font-size: 1em;
+    height: 4%;
+  }
+
+  .footerTextCartMedia {
+    display: none;
+  }
+
+  .homemediabtnCartMedia {
+    position: relative;
+    left: 5%;
+    border: none;
+    background-color: #ffffff;
+    cursor: pointer;
+    display: block;
+  }
+
+  .homemediaCartMedia {
+    position: relative;
+    width: 100%;
+    height: 6vh;
+    margin-left: -3%;
+    margin-top: -23%;
+  }
+
+  .cartmediabtnCartMedia {
+    position: relative;
+    left: 0%;
+    border: none;
+    background-color: #ffffff;
+    cursor: pointer;
+    margin-top: -3%;
+    display: block;
+  }
+
+  .cartmediaCartMedia {
+    position: relative;
+    width: 100%;
+    height: 6vh;
+    margin-left: 445%;
+    margin-top: -65%;
+  }
+
+  .logoutmediabtnCartMedia {
+    position: relative;
+    left: 26%;
+    border: none;
+    background-color: #ffffff;
+    cursor: pointer;
+    margin-top: -3%;
+    display: block;
+  }
+
+  .logoutmediaCartMedia {
+    position: relative;
+    width: 100%;
+    height: 6vh;
+    margin-left: 428%;
+    margin-top: -60%;
+  }
+
+  .loginmediabtnCartMedia {
+    position: relative;
+    left: 26%;
+    border: none;
+    background-color: #ffffff;
+    cursor: pointer;
+    margin-top: -2%;
+    display: block;
+  }
+
+  .loginmediaCartMedia {
+    position: relative;
+    width: 100%;
+    height: 6vh;
+    margin-left: 765%;
+    margin-top: -60%;
   }
 }

@@ -10,6 +10,10 @@ import line1 from "../images/Line 2.png";
 import { useNavigate } from "react-router-dom";
 import leftAro from "../images/leftaro.png";
 import music1 from "../images/Group 30.png";
+import homeMedia from "../images/mediahome.png";
+import cartMedia from "../images/mediacart.png";
+import logoutMedia from "../images/medialogout.png";
+import loginMedia from "../images/medialogin.png";
 
 const Cart = () => {
   const backendUrl = "https://backend-1-blue.vercel.app/api/v1/cart/";
@@ -67,16 +71,20 @@ const Cart = () => {
   const CartToHome = () => {
     navigate(`/`);
   };
+
+  const goSignIn = () => {
+    navigate("/Signin ");
+  };
+
+  const imInCart = () => {
+    navigate("/Cart ");
+  };
   return (
     <div>
       {/* <h3>price-₹{user.mobileNumber}</h3> */}
       <p className="navpara-1">Get 50% off on selected items | Shop Now </p>
       <nav>
-        <img
-        src= {music1}
-        alt="just an img"
-        className= {styles.cartMusicimg}
-        />
+        <img src={music1} alt="just an img" className={styles.cartMusicimg} />
         {!isLoggedIn ? (
           <>
             <Link to="/signin">Signup</Link>
@@ -98,9 +106,9 @@ const Cart = () => {
         </button>
       </div>
 
-      <button className={styles.backBtnMedia } onClick={CartToHome} >
-          <img src={leftAro} alt="just a aro"  />
-        </button>
+      <button className={styles.backBtnMedia} onClick={CartToHome}>
+        <img src={leftAro} alt="just a aro" />
+      </button>
 
       <img src={myCartimg} alt="" className={styles.mycartimg} />
 
@@ -185,11 +193,52 @@ const Cart = () => {
             >
               PLACE ORDER
             </button>
-            <div style={{ height: '10vh' }}></div>
+            <div style={{ height: "10vh" }}></div>
           </div>
         ))}
       </div>
-      <div className="homeFotter">Musicart | All rights reserved</div>
+      <div className={styles.homeFotterCartMedia}>
+        <span className={styles.footerTextCartMedia}>
+          Musicart | All rights reserved
+        </span>
+        <button className={styles.homemediabtnCartMedia}>
+          <img
+            src={homeMedia}
+            alt="mediaicon"
+            className={styles.homemediaCartMedia}
+            onClick={CartToHome}
+          />
+        </button>
+        <button className={styles.cartmediabtnCartMedia}>
+          <img
+            src={cartMedia}
+            alt="cartmedia"
+            className={styles.cartmediaCartMedia}
+            onClick={imInCart}
+          />
+        </button>
+        {!isLoggedIn ? (
+          <>
+            <button className={styles.loginmediabtnCartMedia}>
+              <img
+                src={loginMedia}
+                alt="cartmedia"
+                className={styles.loginmediaCartMedia}
+                onClick={goSignIn}
+              />
+            </button>
+          </>
+        ) : (
+          <button className={styles.logoutmediabtnCartMedia}>
+            <img
+              src={logoutMedia}
+              alt="cartmedia"
+              className={styles.logoutmediaCartMedia}
+              onClick={handleLogout}
+            />
+          </button>
+        )}
+      </div>
     </div>
   );
 };
