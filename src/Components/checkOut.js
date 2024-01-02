@@ -7,6 +7,8 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
+import music1 from "../images/Group 30.png";
+import leftAro from "../images/leftaro.png";
 
 const CheckOut = () => {
   const backendUrl = "https://backend-1-blue.vercel.app/api/v1/buyNow/";
@@ -40,6 +42,11 @@ const CheckOut = () => {
     <div>
       <p className="navpara-1">Get 50% off on selected items | Shop Now </p>
       <nav>
+        <img
+          src={music1}
+          alt="just an img"
+          className={styles.checkoutMusicimg}
+        />
         {!isLoggedIn ? (
           <>
             <Link to="/signin">Signup</Link>
@@ -57,6 +64,10 @@ const CheckOut = () => {
 
       <button className={styles.checkOutBack} onClick={backToCart}>
         Back to Cart
+      </button>
+
+      <button className={styles.checkoutBackBtnMedia} onClick={backToCart}>
+        <img src={leftAro} alt="just a aro" />
       </button>
 
       <h1 className={styles.checkoutUnderline}>
@@ -99,7 +110,21 @@ const CheckOut = () => {
             <p className={styles.delivaryTime}>
               Estimated delivery :<br /> Monday — FREE Standard Delivery
             </p>
+            <p className={styles.odrSummaryMedia}>Order Summary</p>
+            <p className={styles.checkoutPlaceOdr2ItemMedia}>
+              Items : ₹ {product.price}{" "}
+            </p>
+            <p className={styles.checkoutPlaceDeliveryMedia}>
+              Delivery : ₹45.00
+            </p>
+            <p className={styles.checkOutPlaceOdrTotalMedia}>
+              Order Total : ₹ {product.price + 45}{" "}
+            </p>
           </div>
+          <button className={styles.PlaceUrOdrBtnMedia}>
+            Place your order
+          </button>
+          <div style={{ height: "10vh" }}></div>
           <div className={styles.checkOutLine2} />
 
           <div className={styles.checkoutPlaceOdr1}>
@@ -111,8 +136,9 @@ const CheckOut = () => {
               By placing your order, you agree to Musicart privacy notice and
               conditions of use.
             </p>
+            
           </div>
-
+          <div style={{ height: "10vh" }}></div>
           <div className={styles.checkoutPlaceOdr2}>
             <button className={styles.PlaceUrOdrBtn2}>Place your order</button>
             <p className={styles.checkoutAtoMt3}>
@@ -130,12 +156,12 @@ const CheckOut = () => {
           </div>
         </div>
       )}
-
-      <div className={styles.checkOutFooter}>
-        Musicart | All rights reserved
-      </div>
+      
+      <div className="homeFotter">Musicart | All rights reserved</div>
+    
     </div>
   );
+  
 };
 
 export default CheckOut;
