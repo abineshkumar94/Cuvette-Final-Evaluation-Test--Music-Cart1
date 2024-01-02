@@ -131,6 +131,16 @@ const Home = () => {
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
   };
 
+  const handleSearch = (e) => {
+   
+    e.preventDefault()
+    console.log(searchQuery);
+    console.log(`${backendUrl}products?brand=${searchQuery}`)
+    fetch(`${backendUrl}products?brand=${searchQuery}`)
+      .then((res) => res.json())
+      .then((data) => setproducts(data));
+  }
+
   useEffect(() => {
     fetch(`${backendUrl}products`)
       .then((res) => res.json())
@@ -175,7 +185,7 @@ const Home = () => {
         <img src={cimgthree} alt="" className="container-img-3" />
       </div>
 
-      <form className="search-container">
+      <form className="search-container" onSubmit={handleSearch }>
         <button type="submit">
           <img src={search} alt="search-icon" className="" />
         </button>
@@ -184,6 +194,9 @@ const Home = () => {
           placeholder="Search Product"
           className=""
           value={searchQuery}
+          onChange={(e) =>{
+            setSearchQuery(e.target.value)
+          }}
         />
       </form>
 
