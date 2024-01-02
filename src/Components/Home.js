@@ -36,10 +36,11 @@ const Home = () => {
 
   const handleHeadphoneTypeChange = (event) => {
     setHeadphoneType(event.target.value);
-
-    fetch(`${backendUrl}/products?headphoneType=${event.target.value}`)
+    // fetch(`${backendUrl}products?brand=${event.target.value}`)
+    fetch(`${backendUrl}products?headphoneType=${event.target.value}`)
       .then((res) => res.json())
       .then((data) => setproducts(data));
+      
   };
 
   const handleBrandChange = (event) => {
