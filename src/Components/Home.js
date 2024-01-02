@@ -86,28 +86,6 @@ const Home = () => {
     console.log(products);
   }, [products]);
 
-  const handleSearchSubmit = (event) => {
-    event.preventDefault();
-    fetch(`${backendUrl}products?search=${searchQuery}`)
-      .then((res) => {
-        if (!res.ok) {
-          throw new Error("Network response was not ok");
-        }
-        return res.json();
-      })
-      .then((data) => {
-        console.log(data);
-        setproducts(data);
-        console.log(products);
-      })
-      .catch((error) => {
-        console.error(
-          "There has been a problem with your fetch operation:",
-          error
-        );
-      });
-  };
-
   const handleGridClick = () => {
     setIsGridView(true);
     setIsListView(false);
@@ -196,7 +174,7 @@ const Home = () => {
         <img src={cimgthree} alt="" className="container-img-3" />
       </div>
 
-      <form className="search-container" onSubmit={handleSearchSubmit}>
+      <form className="search-container">
         <button type="submit">
           <img src={search} alt="search-icon" className="" />
         </button>
@@ -205,7 +183,6 @@ const Home = () => {
           placeholder="Search Product"
           className=""
           value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
         />
       </form>
 

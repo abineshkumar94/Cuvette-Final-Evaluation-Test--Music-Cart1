@@ -255,6 +255,7 @@ const ProductDetails = () => {
           </button>
         )}
       </div>
+      <div style={{ height: "15vh" }}></div>
     </div>
   );
 };
