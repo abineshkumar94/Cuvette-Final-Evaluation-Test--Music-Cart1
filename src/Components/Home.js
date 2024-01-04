@@ -156,8 +156,8 @@ const Home = () => {
       <nav>
         {!isLoggedIn ? (
           <>
-            <Link to="/signin">Signup</Link>
-            <Link to="/createaccount">Login |</Link>
+              <Link to="/signin" className="hide-on-small-screen">Signup</Link>
+     <Link to="/createaccount" className="hide-on-small-screen">Login |</Link>
           </>
         ) : (
           <h3 className="logout-text" onClick={handleLogout}>
